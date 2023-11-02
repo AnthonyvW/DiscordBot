@@ -1,9 +1,11 @@
 # DiscordBot
 
 
+```
 python -m venv venv
 venv\Scripts\activate.bat
 pip install discord.py
+```
 
 Go to https://discord.com/developers/docs/intro
 
