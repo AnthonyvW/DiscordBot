@@ -1,5 +1,6 @@
 # DiscordBot
 
+This is a bot meant to roll dice. It allows for placing a message when rolling dice, exploding dice both on a 1 and on the max, adding to the result, adding to every dice rolled, and showing what dice were rolled.
 
 ```
 python -m venv venv
