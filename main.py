@@ -23,17 +23,17 @@ def modifier_check(input):
     # Modifier to all dice rolls
     if not input.find("i") == -1:
         global_mod = True
+        input = input.replace("i", "")
 
     # Exploding positive
     if not input.find("e") == -1:
         explode_positive = True
+        input = input.replace("e", "")
 
     # Exploding Negative
     if not input.find("l") == -1:
         explode_negative = True
-
-    # Remove modifiers from string
-    input = re.split('i|e|l', input)[0]
+        input = input.replace("l", "")
 
     return input, global_mod, explode_positive, explode_negative
 
@@ -126,7 +126,7 @@ You can explode dice with the `e` and `l` suffixes for example `!r 2d6+2e` will 
                             result.append(random.randint(1,int(amounts[1])))
 
                 # Output
-                #response = f"Bot is Currently being Worked on if a feature doesn't work properly try again later\n"
+                #response = f"Bot is Currently being Worked on if a feature doesn't work properly try again later\nYou rolled {content} "
                 response = f"You rolled {content} "
 
                 # Sum up and output list
