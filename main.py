@@ -41,7 +41,8 @@ def explode(input, max, num):
     total = []
     num_rolls = 0
 
-    if max == 1 or (1 in num and 2 in num):
+    # This prevents 2 sided dice from being rolled with being set to explode on both 1 and 2
+    if max == 1 or (1 in num and 2 in num and 2 == max):
         return total, num_rolls
     
     while input in num:
